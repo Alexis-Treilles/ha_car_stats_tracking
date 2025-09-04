@@ -2,8 +2,8 @@
   "domain": "voitures",
   "name": "Suivi Voitures",
   "version": "1.0.0",
-  "documentation": "https://github.com/tonutilisateur/home-assistant-voitures",
+  "documentation": "https://github.com/Alexis-Treilles/ha_car_stats_tracking",
   "requirements": [],
   "dependencies": [],
-  "codeowners": ["@tonutilisateur"]
+  "codeowners": ["@Alexis-Treilles"]
 }

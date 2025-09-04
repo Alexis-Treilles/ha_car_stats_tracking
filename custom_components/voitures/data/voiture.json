@@ -1,0 +1,26 @@
+{
+    "voitures": {
+      "audi_a3": {
+        "date_achat": "2022-01-01",
+        "prix_achat": 15000,
+        "km_achat": 50000,
+        "pleins": [],
+        "entretiens": []
+      },
+      "renault_4l": {
+        "date_achat": "2021-06-15",
+        "prix_achat": 8000,
+        "km_achat": 70000,
+        "pleins": [],
+        "entretiens": []
+      },
+      "peugeot_205": {
+        "date_achat": "2019-03-10",
+        "prix_achat": 4000,
+        "km_achat": 90000,
+        "pleins": [],
+        "entretiens": []
+      }
+    }
+  }
+  
