@@ -1,0 +1,9 @@
+{
+  "domain": "voitures",
+  "name": "Suivi Voitures",
+  "version": "1.0.0",
+  "documentation": "https://github.com/tonutilisateur/home-assistant-voitures",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": ["@tonutilisateur"]
+}

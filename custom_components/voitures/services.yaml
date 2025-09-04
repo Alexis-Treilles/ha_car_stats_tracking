@@ -1,0 +1,10 @@
+# Exemple de service Home Assistant pour enregistrer un événement
+enregistrer_evenement:
+  description: "Enregistre un plein ou un entretien"
+  fields:
+    type:
+      description: "Type d'événement : Plein ou Entretien"
+      example: "Plein"
+    voiture_id:
+      description: "Identifiant de la voiture"
+      example: "audi_a3"

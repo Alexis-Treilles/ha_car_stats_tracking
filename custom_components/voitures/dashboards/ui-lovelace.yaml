@@ -1,0 +1,11 @@
+title: Voitures
+views:
+  - title: Gestion des voitures
+    path: voitures
+    cards:
+      - type: entities
+        title: Audi A3 - Saisie
+        entities:
+          - sensor.audi_a3_km
+          - sensor.audi_a3_litres
+          - sensor.audi_a3_prix_litre
