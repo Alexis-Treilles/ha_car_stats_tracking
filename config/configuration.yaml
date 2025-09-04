@@ -1,0 +1,6 @@
+voitures:
+  vehicles:
+    - name: "Ma Voiture"
+      purchase_date: "2023-01-01"
+      purchase_price: 25000
+      initial_km: 0
