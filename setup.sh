@@ -1,10 +1,10 @@
 #!/bin/sh
 
 # Créer la structure du repository
-mkdir -p hello-world-addon
+mkdir -p hello_world
 
 # Créer le Dockerfile
-cat > hello-world-addon/Dockerfile <<EOF
+cat > hello_world/Dockerfile <<EOF
 FROM nginx:alpine
 COPY index.html /usr/share/nginx/html/index.html
 EXPOSE 80
@@ -12,22 +12,43 @@ CMD ["nginx", "-g", "daemon off;"]
 EOF
 
 # Créer la page HTML
-cat > hello-world-addon/index.html <<EOF
+cat > hello_world/index.html <<EOF
 <!DOCTYPE html>
 <html>
 <head>
     <title>Hello World</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #03a9f4;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>Mon premier module personnalisé Home Assistant</p>
+    <div class="container">
+        <h1>Hello World!</h1>
+        <p>Mon premier module personnalisé Home Assistant</p>
+    </div>
 </body>
 </html>
 EOF
 
 # Créer le fichier de configuration addon
-cat > hello-world-addon/config.json <<EOF
+cat > hello_world/config.json <<EOF
 {
   "name": "Hello World Addon",
   "version": "1.0.0",
@@ -37,7 +58,10 @@ cat > hello-world-addon/config.json <<EOF
   "startup": "application",
   "boot": "auto",
   "ports": {
-    "80/tcp": 80
+    "80/tcp": 8080
+  },
+  "ports_description": {
+    "80/tcp": "Web interface"
   },
   "map": ["config:rw"],
   "options": {},
@@ -47,7 +71,7 @@ cat > hello-world-addon/config.json <<EOF
 EOF
 
 # Créer le fichier de documentation
-cat > hello-world-addon/DOCS.md <<EOF
+cat > hello_world/DOCS.md <<EOF
 # Hello World Addon
 
 Un module complémentaire personnalisé qui affiche une page web simple.
@@ -57,9 +81,19 @@ Un module complémentaire personnalisé qui affiche une page web simple.
 Aucune configuration nécessaire.
 EOF
 
+# Créer le fichier repository.json requis
+cat > repository.json <<EOF
+{
+    "name": "Mon Repository Personnalisé",
+    "url": "https://github.com/votre-utilisateur/votre-repo",
+    "maintainer": "Votre Nom <votre@email.com>"
+}
+EOF
+
 # Rendre le script exécutable
 chmod +x "$0"
 
 echo "Structure créée avec succès!"
+echo "N'oubliez pas de modifier le fichier repository.json avec vos informations"
 echo "Ajoutez ce repository dans Home Assistant > Superviseur > Add-ons > ... > Repository"
 echo "L'addon 'Hello World Addon' apparaîtra dans la liste des modules complémentaires"
