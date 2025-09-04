@@ -12,7 +12,7 @@ Créer un système modulaire pour suivre les pleins, entretiens et coûts de plu
 ---
 
 2️⃣ Architecture générale
-
+```
 Home Assistant
 ├── configuration.yaml
 │   ├── input_number: !include voiture_input_number.yaml
