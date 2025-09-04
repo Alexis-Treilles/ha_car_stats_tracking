@@ -32,7 +32,7 @@ cat > custom_components/vehicle_tracker/manifest.json << EOF
   "documentation": "https://github.com/your-username/vehicle-tracker",
   "requirements": [],
   "dependencies": [],
-  "codeowners": ["@your-username"],
+  "codeowners": ["@alexis-treilles"],
   "config_flow": true,
   "iot_class": "local_polling"
 }
