@@ -1,7 +1,7 @@
 {
   "domain": "voitures",
   "name": "Suivi Voitures",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "documentation": "https://github.com/Alexis-Treilles/ha_car_stats_tracking",
   "requirements": [],
   "dependencies": [],

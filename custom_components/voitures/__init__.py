@@ -1,1 +1,1 @@
-# Composant Voitures minimal pour HACS
+"""Composant Voitures minimal pour HACS"""
