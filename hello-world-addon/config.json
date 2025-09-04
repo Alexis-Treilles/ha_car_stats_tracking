@@ -1,0 +1,16 @@
+{
+  "name": "Hello World Addon",
+  "version": "1.0.0",
+  "slug": "hello_world",
+  "description": "Un addon personnalisé avec interface web Hello World",
+  "arch": ["amd64", "armv7", "aarch64"],
+  "startup": "application",
+  "boot": "auto",
+  "ports": {
+    "80/tcp": 80
+  },
+  "map": ["config:rw"],
+  "options": {},
+  "schema": {},
+  "image": "hello-world-addon-{arch}"
+}
