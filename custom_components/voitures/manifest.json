@@ -1,0 +1,11 @@
+{
+  "domain": "voitures",
+  "name": "Suivi Voitures",
+  "version": "1.0.0",
+  "documentation": "https://github.com/votre-utilisateur/suivi-voitures",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": ["@votre-utilisateur"],
+  "config_flow": false,
+  "iot_class": "local_polling"
+}
