@@ -47,7 +47,7 @@ cat > hello_world/index.html <<EOF
 </html>
 EOF
 
-# Créer le fichier de configuration addon
+# Créer le fichier de configuration addon CORRIGÉ
 cat > hello_world/config.json <<EOF
 {
   "name": "Hello World Addon",
@@ -66,7 +66,8 @@ cat > hello_world/config.json <<EOF
   "map": ["config:rw"],
   "options": {},
   "schema": {},
-  "image": "hello-world-addon-{arch}"
+  "image": "hello_world_{arch}",
+  "build": true
 }
 EOF
 
@@ -90,10 +91,26 @@ cat > repository.json <<EOF
 }
 EOF
 
+# Créer un fichier README avec des instructions
+cat > README.md <<EOF
+# Repository d'addons Home Assistant personnalisés
+
+Ce repository contient des addons personnalisés pour Home Assistant.
+
+## Installation
+
+1. Ajoutez ce repository dans Home Assistant:
+   - Allez dans "Superviseur" > "Add-ons" > ... > "Repositories"
+   - Ajoutez l'URL: \`https://github.com/votre-utilisateur/votre-repo\`
+
+2. Installez l'addon "Hello World Addon"
+
+3. Démarrez l'addon et ouvrez le port 8080 dans l'onglet "Configuration"
+EOF
+
 # Rendre le script exécutable
 chmod +x "$0"
 
 echo "Structure créée avec succès!"
 echo "N'oubliez pas de modifier le fichier repository.json avec vos informations"
 echo "Ajoutez ce repository dans Home Assistant > Superviseur > Add-ons > ... > Repository"
-echo "L'addon 'Hello World Addon' apparaîtra dans la liste des modules complémentaires"

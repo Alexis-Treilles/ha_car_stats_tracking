@@ -15,5 +15,6 @@
   "map": ["config:rw"],
   "options": {},
   "schema": {},
-  "image": "hello-world-addon-{arch}"
+  "image": "hello_world_{arch}",
+  "build": true
 }
